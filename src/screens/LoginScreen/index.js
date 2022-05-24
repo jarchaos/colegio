@@ -26,16 +26,16 @@ const LoginScreen = () => {
     return (
         <View>
             {isVerified == 1 &&
-             <ProfessorScreen/>
+             <ProfessorScreen setIsVerified={setIsVerified}/>
             }
 
             {isVerified == 2 &&
-             <ParentsScreen/>
+             <ParentsScreen setIsVerified={setIsVerified}/>
             }
 
             {isVerified == null &&
             <View>
-                <Text>Hola mundo</Text>
+                <Text>COLEGIO APP</Text>
                 <Input tittle={"Usuario"} placeHolder={"Digite usuario"} placeholderTextColor={"grey"} data={user} setData={setUser} secureTextEntry={false} />
                 <Input tittle={"Contraseña"} placeHolder={"Digite contraseña"} placeholderTextColor={"grey"} data={password} setData={setPassword} secureTextEntry={true} />
                 <Button onPress={handlePress} text={'Enviar'} disabled={false} />
